@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Title</title>
+</head>
+<body>
+<div class="rowsContainer" th:fragment="resultsList">
+    <div class="row clearPaddingTop">
+        <div th:each="result: ${results}" th:id="'item'+${result.id}" class=" pull-left dogResult">
+
+            <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                <div class="col-sm-12 clearPaddingTop imageContainer">
+                    <img class="imageLink" th:src="@{'/getMainImage/'+${result.id}}"/>
+                </div>
+            </div>
+            <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                <div class="row">
+                    <div class="col-md-4">
+                        Name:<span th:text="${result.name}">Butch</span>
+                    </div>
+
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+                        <a th:href="@{'/dogs/'+${result.id}+'/puppies'}" th:value="Puppies">Puppies</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        Sex:<span th:text="${result.gender}">Butch</span>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+                <div class="row descriptionContainerDiv">
+                    <div class="col-md-12 descriptionDiv">
+                        <span th:text="${result.description}">This is a short description of a dog, achievements, rewards, medals etc...</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 detailsButtonContainer">
+                        <button class="btn btn-primary">Click for details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

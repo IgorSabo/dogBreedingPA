@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" media="screen" />
+
+    <title>Puppy Website</title>
+
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div th:replace="../fragments/header::header('dogs')"></div>
+    </div>
+    <div id="body">
+        <div id="background">
+            <div>
+                <div>
+                    <div>
+                        <h1>&#8220;This template is FREE&#8221;.</h1>
+                        <p>
+                            This website template has been designed by Free Website Templates for you, for free. You can
+                            replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer
+                            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                            erat volutpat. Ut wisi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section">
+            <div class="row clearPaddingTop">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4" style="padding-top: 10px;">
+                        <div class="row clearPaddingTop" th:replace="../fragments/results::resultsList">
+
+                            <!-- first result -->
+                            <!--<div class="dogResult pull-left">
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="col-sm-12 clearPaddingTop imageContainer">
+                                        <img class="imageLink" th:src="@{/getMainImage/1}" />
+                                    </div>
+                                </div>
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Name:Butch
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a th:href="@{/dogs/1/puppies.html}" th:value="Puppies">Puppies</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Sex:Female
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row descriptionContainerDiv">
+                                        <div class="col-md-12 descriptionDiv">
+                                            This is a short description of a dog, achievements, rewards, medals etc...
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 detailsButtonContainer">
+                                            <button class="btn btn-primary">Click for details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <!-- second result -->
+                            <!--<div class="dogResult pull-left">
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="col-sm-12 clearPaddingTop imageContainer">
+                                        <img class="imageLink" th:src="@{/getMainImage/1}" />
+                                    </div>
+                                </div>
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Name:Butch
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a th:href="@{/dogs/1/puppies.html}" th:value="Puppies">Puppies</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Sex:Female
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row descriptionContainerDiv">
+                                        <div class="col-md-12 descriptionDiv">
+                                            This is a short description of a dog, achievements, rewards, medals etc...
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 detailsButtonContainer">
+                                            <button class="btn btn-primary">Click for details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+
+                            <!-- third result -->
+                            <!--<div class="dogResult pull-left">
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="col-sm-12 clearPaddingTop imageContainer">
+                                        <img class="imageLink" th:src="@{/getMainImage/1}" />
+                                    </div>
+                                </div>
+                                <div class="row clearPaddingTop clearPaddingBottom rowContent">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Name:Butch
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a th:href="@{/dogs/1/puppies.html}" th:value="Puppies">Puppies</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            Sex:Female
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                        <div class="col-md-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row descriptionContainerDiv">
+                                        <div class="col-md-12 descriptionDiv">
+                                            This is a short description of a dog, achievements, rewards, medals etc...
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 detailsButtonContainer">
+                                            <button class="btn btn-primary">Click for details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+                </div>
+            </div>
+            <div class="row pagination">
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-primary btn-xs buttonPrevious" style="float:right;"
+                            onclick="getPrevious()">
+                        <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-primary btn-xs buttonNext pull-left" style="float: right" onclick="getNext()"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="logo">
+            <a href="index.html"><img th:src="@{images/logo.jpg}" alt="Logo" /></a>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+        </ul>
+        <p>
+            &copy; Copyright &copy; 2023. Company name all rights reserved
+        </p>
+        <div id="connect">
+            <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
+            <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
+            <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
